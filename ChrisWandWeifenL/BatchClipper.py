@@ -10,6 +10,7 @@
 #-------------------------------------------------------------------------------
 arcpy=None
 import os
+from sys import argv
 def importarcpy():
     import arcpy
     from arcpy import env
@@ -17,7 +18,7 @@ def importarcpy():
 
 #should convert to ..\..\ format so that it can be used on other computers
 #0=targetdata 1=sites 2=output
-workspaces=[ r"C:\Users\chris\Desktop\0_GIS_Certificate\acgis\GIS4207_ArcCustom\Data\BatchClipData\TargetData", r"C:\Users\chris\Desktop\0_GIS_Certificate\acgis\GIS4207_ArcCustom\Data\BatchClipData\Sites", r"C:\Users\chris\Desktop\0_GIS_Certificate\acgis\GIS4207_ArcCustom\Data\BatchClipData\output_data"]
+workspaces=[ argv[1], argv[2], argv[3]]
 working_folder= os.path.dirname(__file__)
 os.chdir(working_folder)
 
