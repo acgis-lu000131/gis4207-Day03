@@ -12,6 +12,7 @@ arcpy=None
 import os
 from sys import argv
 def importarcpy():
+    global arcpy
     import arcpy
     from arcpy import env
     global env
